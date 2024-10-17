@@ -1,0 +1,14 @@
+[tool.poetry]
+name = "sxsw-hackathon-aibe"
+version = "0.0.1"
+description = "The AI BE for our app to kickstart your first months of employment and help track responsibilities - onboardsmart."
+authors = ["Lukas Judith <lukasjudith12@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
