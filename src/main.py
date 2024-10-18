@@ -16,11 +16,11 @@ from dotenv import load_dotenv
 load_dotenv()
 
 
-from src.extract_responsibilities import (
+from extract_responsibilities import (
     extract_responsibilities,
     check_responsibilities,
 )
-from src.data_models import (
+from data_models import (
     ExtractResponsibilitiesRequest,
     ExtractResponsibilitiesResponse,
     CheckResponsibilitiesRequest,
@@ -31,24 +31,24 @@ from src.data_models import (
 NGROK_AUTH_TOKEN = os.getenv("NGROK_AUTH_TOKEN")
 PORT = 8000
 
-# set up ngrok for local development
-ngrok.set_auth_token(NGROK_AUTH_TOKEN)
+# # set up ngrok for local development
+# ngrok.set_auth_token(NGROK_AUTH_TOKEN)
 
-# open a HTTP tunnel on the default port 80
-# <NgrokTunnel: "https://<public_sub>.ngrok.io" -> "http://localhost:PORT">
-http_tunnel = ngrok.connect(
-    addr="http://localhost:8000",
-    proto="http",
-    name="http_tunnel",
-    hostname="myapp.ngrok.io.ngrok-free.dev",
-)
-
-print(f"Public URL: {http_tunnel.public_url}")
-
-# # Open a named tunnel from the config file
-# named_tunnel = ngrok.connect(
-#     name="my_tunnel_name",
+# # open a HTTP tunnel on the default port 80
+# # <NgrokTunnel: "https://<public_sub>.ngrok.io" -> "http://localhost:PORT">
+# http_tunnel = ngrok.connect(
+#     addr="http://localhost:8000",
+#     proto="http",
+#     name="http_tunnel",
+#     hostname="myapp.ngrok.io.ngrok-free.dev",
 # )
+
+# print(f"Public URL: {http_tunnel.public_url}")
+
+# # # Open a named tunnel from the config file
+# # named_tunnel = ngrok.connect(
+# #     name="my_tunnel_name",
+# # )
 
 
 app = fastapi.FastAPI()

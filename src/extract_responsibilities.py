@@ -9,7 +9,7 @@ import dspy
 import json
 
 
-from src.data_models import (
+from data_models import (
     ExtractResponsibilitiesOutput,
     Responsibility,
     ResponsibilitiesFullfilledStatus,
@@ -133,7 +133,7 @@ if __name__ == "__main__":
             },
         ],
     }
-    from src.data_models import CheckResponsibilitiesRequest
+    from data_models import CheckResponsibilitiesRequest
 
     example_request = CheckResponsibilitiesRequest(
         transcript=example["transcript"],
