@@ -7,6 +7,14 @@ readme = "README.md"
 
 [tool.poetry.dependencies]
 python = "^3.12"
+fastapi = "^0.115.2"
+pyngrok = "^7.2.0"
+uvicorn = "^0.32.0"
+python-dotenv = "^1.0.1"
+pydantic = "^2.9.2"
+groq = "^0.11.0"
+dspy = "^2.5.12"
+dspy-ai = "^2.5.12"
 
 
 [build-system]
