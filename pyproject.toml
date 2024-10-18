@@ -16,6 +16,10 @@ groq = "^0.11.0"
 dspy = "^2.5.12"
 dspy-ai = "^2.5.12"
 python-multipart = "^0.0.12"
+google-auth = "^2.35.0"
+google-auth-oauthlib = "^1.2.1"
+google-apps-meet = "^0.1.8"
+google-cloud-pubsub = "^2.26.1"
 
 
 [build-system]
