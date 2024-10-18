@@ -114,4 +114,17 @@ async def check_responsibilities_handler(
 
 if __name__ == "__main__":
 
-    uvicorn.run(app, host="0.0.0.0", port=PORT)
+    import argparse
+
+    parser = argparse.ArgumentParser(description="Run the FastAPI server.")
+
+    parser.add_argument(
+        "--port",
+        type=int,
+        default=PORT,
+        help="The port to run the FastAPI server on.",
+    )
+
+    args = parser.parse_args()
+
+    uvicorn.run(app, host="0.0.0.0", port=args.port)
