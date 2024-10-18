@@ -15,6 +15,7 @@ pydantic = "^2.9.2"
 groq = "^0.11.0"
 dspy = "^2.5.12"
 dspy-ai = "^2.5.12"
+python-multipart = "^0.0.12"
 
 
 [build-system]
