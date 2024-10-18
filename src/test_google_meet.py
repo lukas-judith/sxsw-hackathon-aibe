@@ -19,6 +19,9 @@ def authorize() -> Credentials:
             CLIENT_SECRET_FILE,
             scopes=[
                 "https://www.googleapis.com/auth/meetings.space.created",
+                "https://www.googleapis.com/auth/meetings",
+                # "https://www.googleapis.com/auth/meetings.audio.readonly",
+                "https://www.googleapis.com/auth/drive",
             ],
         )
         flow.run_local_server(port=0)
